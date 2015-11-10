@@ -171,17 +171,7 @@
 		}
 		else // Follow The Fuglyosity of Flat Fad
 		{
-			self.backgroundColor = [UIColor colorWithWhite:0.94f alpha:0.94f];
-
-			CGRect lineRect = self.bounds; lineRect.size.height = 1.0f; lineRect.origin.y -= lineRect.size.height;
-
-			UIView *lineView = [[UIView alloc] initWithFrame:lineRect];
-			lineView.autoresizesSubviews = NO;
-			lineView.userInteractionEnabled = NO;
-			lineView.contentMode = UIViewContentModeRedraw;
-			lineView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-			lineView.backgroundColor = [UIColor colorWithWhite:0.64f alpha:0.94f];
-			[self addSubview:lineView];
+            self.backgroundColor = [UIColor colorWithRed:37.0/255.0 green:39.0/255.0 blue:42.0/255.0 alpha:1.0f];
 		}
 
 		CGFloat space = (([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) ? PAGE_NUMBER_SPACE_LARGE : PAGE_NUMBER_SPACE_SMALL);
