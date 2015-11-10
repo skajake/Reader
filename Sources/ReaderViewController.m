@@ -255,6 +255,10 @@
 	}
 }
 
+-(void)reLayOut {
+    [self updateContentViews:theScrollView]; lastAppearSize = CGSizeZero;
+}
+
 - (void)showDocument
 {
 	[self updateContentSize:theScrollView]; // Update content size first
