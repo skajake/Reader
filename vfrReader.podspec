@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
  s.ios.deployment_target = "6.0"
  s.source_files = "Sources/**/*.{h,m}"
  s.resources = "Graphics/Reader-*.png"
- s.frameworks = "UIKit", "Foundation", "CoreGraphics", "QuartzCore", "ImageIO", "MessageUI"
+ s.frameworks = "UIKit", "Foundation", "CoreGraphics", "QuartzCore", "ImageIO"
  s.requires_arc = true
 end
