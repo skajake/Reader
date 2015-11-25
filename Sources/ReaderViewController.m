@@ -34,7 +34,7 @@
 
 #import <MessageUI/MessageUI.h>
 
-@interface ReaderViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate, MFMailComposeViewControllerDelegate, UIDocumentInteractionControllerDelegate,
+@interface ReaderViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate, UIDocumentInteractionControllerDelegate,
 									ReaderMainToolbarDelegate, ReaderMainPagebarDelegate, ReaderContentViewDelegate, ThumbsViewControllerDelegate>
 @end
 
@@ -801,8 +801,10 @@
 
 - (void)tappedInToolbar:(ReaderMainToolbar *)toolbar emailButton:(UIButton *)button
 {
-	if ([MFMailComposeViewController canSendMail] == NO) return;
+//	if ([MFMailComposeViewController canSendMail] == NO) return;
 
+    return;
+    
 	if (printInteraction != nil) [printInteraction dismissAnimated:YES];
 
 	unsigned long long fileSize = [document.fileSize unsignedLongLongValue];
@@ -815,18 +817,18 @@
 
 		if (attachment != nil) // Ensure that we have valid document file attachment data available
 		{
-			MFMailComposeViewController *mailComposer = [MFMailComposeViewController new];
-
-			[mailComposer addAttachmentData:attachment mimeType:@"application/pdf" fileName:fileName];
-
-			[mailComposer setSubject:fileName]; // Use the document file name for the subject
-
-			mailComposer.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-			mailComposer.modalPresentationStyle = UIModalPresentationFormSheet;
-
-			mailComposer.mailComposeDelegate = self; // MFMailComposeViewControllerDelegate
-
-			[self presentViewController:mailComposer animated:YES completion:NULL];
+//			MFMailComposeViewController *mailComposer = [MFMailComposeViewController new];
+//
+//			[mailComposer addAttachmentData:attachment mimeType:@"application/pdf" fileName:fileName];
+//
+//			[mailComposer setSubject:fileName]; // Use the document file name for the subject
+//
+//			mailComposer.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+//			mailComposer.modalPresentationStyle = UIModalPresentationFormSheet;
+//
+//			mailComposer.mailComposeDelegate = self; // MFMailComposeViewControllerDelegate
+//
+//			[self presentViewController:mailComposer animated:YES completion:NULL];
 		}
 	}
 }
@@ -849,16 +851,16 @@
 #endif // end of READER_BOOKMARKS Option
 }
 
-#pragma mark - MFMailComposeViewControllerDelegate methods
-
-- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
-{
-#ifdef DEBUG
-	if ((result == MFMailComposeResultFailed) && (error != NULL)) NSLog(@"%@", error);
-#endif
-
-	[self dismissViewControllerAnimated:YES completion:NULL];
-}
+//#pragma mark - MFMailComposeViewControllerDelegate methods
+//
+//- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+//{
+//#ifdef DEBUG
+//	if ((result == MFMailComposeResultFailed) && (error != NULL)) NSLog(@"%@", error);
+//#endif
+//
+//	[self dismissViewControllerAnimated:YES completion:NULL];
+//}
 
 #pragma mark - UIDocumentInteractionControllerDelegate methods
 

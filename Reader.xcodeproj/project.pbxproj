@@ -64,7 +64,6 @@
 		45AB7323141FC0B1003524C3 /* ReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AB730E141FC0B1003524C3 /* ReaderViewController.m */; };
 		45AB7324141FC0B1003524C3 /* ThumbsMainToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AB7310141FC0B1003524C3 /* ThumbsMainToolbar.m */; };
 		45AB7325141FC0B1003524C3 /* ThumbsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AB7312141FC0B1003524C3 /* ThumbsViewController.m */; };
-		45BD5AFE13AE721A00D6FE97 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BD5AFD13AE721A00D6FE97 /* MessageUI.framework */; };
 		45D5ADA31610EADD00706B9A /* ReaderDocumentOutline.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D5ADA21610EADC00706B9A /* ReaderDocumentOutline.m */; };
 /* End PBXBuildFile section */
 
@@ -172,7 +171,6 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				450A670411D27B9D00014BF5 /* QuartzCore.framework in Frameworks */,
-				45BD5AFE13AE721A00D6FE97 /* MessageUI.framework in Frameworks */,
 				458DDFD7140D45FA00C5DA94 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
